@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: #edf2f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .book {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 24px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #4b7bec;
+            color: white;
+        }
+
+        #message {
+            margin-top: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Book Library</h1>
+
+    <div class="book">
+        <span>Clean Code</span>
+        <span class="available">Available</span>
+    </div>
+
+    <div class="book">
+        <span>Refactoring</span>
+        <span class="available">Available</span>
+    </div>
+
+    <div class="book">
+        <span>Design Patterns</span>
+        <span class="available">Available</span>
+    </div>
+
+    <div class="book">
+        <span>The Pragmatic Programmer</span>
+        <span class="available">Available</span>
+    </div>
+
+    <button onclick="refreshLibrary()">
+        Refresh Library
+    </button>
+
+    <div id="message"></div>
+
+</div>
+
+<script>
+function refreshLibrary() {
+    document.getElementById("message").textContent =
+        "Library catalog updated successfully.";
+}
+</script>
+
+</body>
+</html>
